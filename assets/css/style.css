@@ -1,1 +1,65 @@
-body { font-family: sans-serif; padding: 20px; }
+:root{
+--maxw:1100px;
+font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+margin:0;
+background: linear-gradient(180deg, var(--bg) 0%, #06060a 100%);
+color:#e8eef8;
+-webkit-font-smoothing:antialiased;
+}
+.container{max-width:var(--maxw);margin:0 auto;padding:28px}
+.site-header{border-bottom:1px solid rgba(255,255,255,0.04);backdrop-filter:blur(4px)}
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:600;letter-spacing:1px;font-size:20px}
+.brand a{color:inherit;text-decoration:none}
+.nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+.main{padding-top:40px}
+.hero{display:flex;gap:28px;align-items:center}
+.hero-left{flex:1}
+.hero-right{width:320px}
+.cover{width:100%;height:auto;border-radius:10px;box-shadow:0 8px 30px rgba(80,80,120,0.2);border:1px solid rgba(255,255,255,0.03)}
+.title{font-size:28px;margin:0 0 6px}
+.subtitle{color:var(--muted);margin:0 0 12px}
+.desc{color:var(--muted);line-height:1.6}
+.links{margin:16px 0;display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--neon-a),var(--neon-b));color:#051025;font-weight:600;text-decoration:none;box-shadow:0 6px 20px rgba(123,97,255,0.12)}
+.more{display:inline-block;margin-top:8px;color:var(--neon-a);text-decoration:none}
+.tracks{margin-top:40px}
+.track-list{list-style:none;padding:0;margin:0}
+.track{display:flex;justify-content:space-between;align-items:center;padding:14px;border-radius:10px;background:var(--panel);text-decoration:none;color:inherit;margin-bottom:10px}
+.track .muted{display:block;color:var(--muted);font-size:13px}
+.track-links a{color:var(--neon-a);text-decoration:none;margin-left:12px}
+.song{display:flex;gap:28px;align-items:flex-start}
+.song-info{flex:1}
+.cover.large{width:360px}
+.links-row{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+.embed .video-wrap{border-radius:10px;overflow:hidden}
+.site-footer{padding:24px 0;color:var(--muted);text-align:center;border-top:1px solid rgba(255,255,255,0.02);margin-top:60px}
+
+
+/* Responsive */
+@media (max-width:800px){
+.hero{flex-direction:column-reverse}
+.hero-right{width:100%}
+.cover.large{width:100%}
+}
+
+
+----- README_DEPLOY.txt -----
+Simple deploy instructions:
+1) Create a GitHub repository named username.github.io (replace username with your GitHub username).
+2) Upload all files preserving the folder structure (index.html at root, nights-traveler.html at root, assets/ folder).
+3) Go to repository Settings → Pages and enable Pages from main branch (or GitHub will auto-detect index.html).
+4) Wait a minute — your site will be live at https://username.github.io
+
+
+Or, simply drag these files to any static host (Netlify, Vercel, Surge) — they work without changes.
+
+
+To replace the cover image: overwrite assets/images/cover.jpg with your real cover (same filename).
+
+
+Enjoy!
